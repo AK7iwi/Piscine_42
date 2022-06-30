@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mfeldman <mfeldman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:26:19 by climousi          #+#    #+#             */
-/*   Updated: 2022/02/20 19:42:31 by mfeldman         ###   ########.fr       */
+/*   Updated: 2022/06/30 08:17:24 by mfeldman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "rush_02.h"
 
 long	ft_atoi_check(char *str);
+char			*create_string(unsigned int nb, char *file);
 
 int	main(int argc, char **argv)
 {
