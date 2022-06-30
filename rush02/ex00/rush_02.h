@@ -3,17 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   rush_02.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mfeldman <mfeldman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:57:50 by nseniak           #+#    #+#             */
-/*   Updated: 2022/06/30 08:13:09 by mfeldman         ###   ########.fr       */
+/*   Updated: 2022/02/20 20:14:21 by nseniak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RUSH_02_H
 # define RUSH_02_H
 
-# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <sys/stat.h>
+# include <sys/types.h>
+# include <fcntl.h>
 # include <stdlib.h>
 
 char			*parse(unsigned int nb, char **tab);
@@ -57,5 +61,7 @@ char			*remove_end_space(char *str);
 char			*ft_strjoin(int size, char **strs, char *sep);
 
 char			**file_to_array(char *file);
+
+void			ft_putstr(char *str);
 
 #endif

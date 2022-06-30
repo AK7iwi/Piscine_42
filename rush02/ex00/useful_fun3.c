@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dissection2.c                                      :+:      :+:    :+:   */
+/*   useful_fun3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 18:24:35 by nseniak           #+#    #+#             */
-/*   Updated: 2022/02/20 20:14:26 by nseniak          ###   ########.fr       */
+/*   Created: 2022/02/19 20:40:38 by nseniak           #+#    #+#             */
+/*   Updated: 2022/02/20 19:44:10 by mfeldman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush_02.h"
 
-char	*from_database(unsigned int nb, char **tab, int add_one)
+char	*add_space(char *str)
 {
-	char	**array;
+	int	n;
 
-	if ((nb == 100 || nb % 3 == 1) && add_one == 1 && nb >= 100)
-	{
-		array = malloc(2 * sizeof(*array));
-		array[0] = parse(1, tab);
-		array[1] = parse(nb, tab);
-		return (ft_strjoin(2, array, " "));
-	}
-	return (parse(nb, tab));
+	n = ft_strlen(str);
+	str[n] = ' ';
+	str[n + 1] = '\0';
+	return (str);
+}
+
+char	*remove_end_space(char *str)
+{
+	int	n;
+
+	n = ft_strlen(str);
+	if (str[n - 1] == ' ')
+		str[n - 1] = '\0';
+	return (str);
 }

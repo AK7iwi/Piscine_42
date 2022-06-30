@@ -6,30 +6,13 @@
 /*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 15:17:41 by mfeldman          #+#    #+#             */
-/*   Updated: 2022/02/20 19:47:00 by mfeldman         ###   ########.fr       */
+/*   Updated: 2022/02/20 20:14:27 by nseniak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "rush_02.h"
 
 #define BUF_SIZE 4096
-
-void	ft_putstr(char *str)
-{
-	int	a;
-
-	a = 0;
-	while (str[a])
-	{
-		a++;
-	}
-	write(1, str, a);
-}
 
 char	**file_to_array(char *file)
 {
@@ -55,6 +38,16 @@ char	**file_to_array(char *file)
 	return (tab);
 }
 
+int	get_line_number(char **tab, unsigned int nb)
+{
+	int	i;
+
+	i = 0;
+	while ((unsigned int)ft_atoi(tab[i]) != nb)
+		i++;
+	return (i);
+}
+
 char	*parse(unsigned int nb, char **tab)
 {
 	char	*buf3;
@@ -62,15 +55,11 @@ char	*parse(unsigned int nb, char **tab)
 	int		j;
 	int		k;
 
-	i = 0;
+	i = get_line_number(tab, nb);
 	j = 0;
-	while ((unsigned int)ft_atoi(tab[i]) != nb)
-		i++;
 	while (tab[i][j] != ':')
-	{	
 		j++;
-		j++;
-	}
+	j ++;
 	while (tab[i][j] == ' ')
 		j++;
 	k = 0;

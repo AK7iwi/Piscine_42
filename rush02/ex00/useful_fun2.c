@@ -6,7 +6,7 @@
 /*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 18:01:37 by nseniak           #+#    #+#             */
-/*   Updated: 2022/02/20 17:43:24 by nseniak          ###   ########.fr       */
+/*   Updated: 2022/02/20 20:12:04 by nseniak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,9 @@ int	ft_atoi(char *str)
 		str ++;
 	}
 	return (nb);
+}
+
+void	ft_putstr(char *str)
+{
+	write(1, str, ft_strlen(str));
 }

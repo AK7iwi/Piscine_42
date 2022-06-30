@@ -6,7 +6,7 @@
 /*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:29:03 by nseniak           #+#    #+#             */
-/*   Updated: 2022/02/20 18:26:20 by nseniak          ###   ########.fr       */
+/*   Updated: 2022/02/20 22:37:33 by climousi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*special_cases(unsigned int nb, int i, char **tab, int add_one)
 	return (ft_strjoin(2, array, " "));
 }
 
-char	*gen_case(unsigned int nb, char **tab, int size, int add_one)
+char	*gen_case(unsigned int nb, char **tab, int size)
 {
 	int		n;
 	char	**array;
@@ -84,7 +84,6 @@ char	*create_string_recur(unsigned int nb, char **tab, int add_one)
 {
 	int		i;
 	int		size;
-	char	**array;
 
 	i = first_digit(nb);
 	size = number_digits(nb);
@@ -95,16 +94,16 @@ char	*create_string_recur(unsigned int nb, char **tab, int add_one)
 	else if (size < 4 || size % 3 == 1)
 		return (special_cases(nb, i, tab, add_one));
 	else
-		return (gen_case(nb, tab, size, add_one));
+		return (gen_case(nb, tab, size));
 }
 
 char	*create_string(unsigned int nb, char *file)
 {
 	char	**tab;
 
-	if (nb == 0)
-		return (0);
 	tab = file_to_array(file);
+	if (nb == 0)
+		return (parse(0, tab));
 	if (!tab)
 		return ("Dict Error\n");
 	return (remove_end_space(create_string_recur(nb, tab, 1)));

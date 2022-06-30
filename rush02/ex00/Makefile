@@ -1,5 +1,6 @@
-SRCS = main.c check_args.c dictio.c dissection.c dissection2.c ft_split.c ft_strjoin.c useful_fun.c\
-		useful_fun2.c useful_fun3.c\ 
+SRCS = $(shell find -name '*.c')
+
+INCLUDES	= $(shell find -name '*.h')
 
 OBJS = ${SRCS:.c=.o}
 
@@ -15,7 +16,7 @@ NAME = rush-02
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-		${CC} -o ${NAME} ${OBJS}
+		${CC} -o ${NAME} ${OBJS} ${INCLUDES}
 
 all:		${NAME}
 
