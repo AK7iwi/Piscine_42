@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mfeldman <mfeldman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:26:19 by climousi          #+#    #+#             */
-/*   Updated: 2022/02/20 22:35:35 by climousi         ###   ########.fr       */
+/*   Updated: 2022/06/30 10:19:11 by mfeldman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush_02.h"
 #include <stdio.h>
 
-long	ft_atoi_check(char *str);
 
 int	main(int argc, char **argv)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush_02.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nseniak <nseniak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mfeldman <mfeldman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:57:50 by nseniak           #+#    #+#             */
-/*   Updated: 2022/02/20 20:14:21 by nseniak          ###   ########.fr       */
+/*   Updated: 2022/06/30 10:31:35 by mfeldman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ char			*ft_strjoin(int size, char **strs, char *sep);
 char			**file_to_array(char *file);
 
 void			ft_putstr(char *str);
+
+long	        ft_atoi_check(char *str);
 
 #endif
