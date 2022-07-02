@@ -16,7 +16,7 @@ NAME = rush-02
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-		${CC} -o ${NAME} ${OBJS} ${INCLUDES}
+		${CC} -o  ${NAME} ${OBJS} ${INCLUDES}
 
 all:		${NAME}
 
