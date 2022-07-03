@@ -8,7 +8,7 @@ CC = gcc
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
 NAME = rush-02
 
@@ -16,7 +16,7 @@ NAME = rush-02
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-		${CC} -o  ${NAME} ${OBJS} ${INCLUDES}
+		${CC} -o  ${NAME} ${SRCS} ${INCLUDES}
 
 all:		${NAME}
 
